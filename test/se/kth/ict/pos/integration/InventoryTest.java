@@ -9,24 +9,7 @@ import static org.junit.Assert.*;
 
 public class InventoryTest {
 
-    @Test
-    public void testUpdateInventory() {
-    ExternalCreator ext = new ExternalCreator();
-    Controller contr = new Controller(ext);
-    int itemIdentifier = 2;
-    int quantity = 4;
-    contr.startSale();
-    contr.enterItemIdentifier(itemIdentifier,quantity);
-    Sale sale = contr.getSale(); 
-    Inventory instance = ext.getInventory();
-    instance.updateInventory(sale);
-    List <SoldItem> items = instance.getList();
-    
-    int result = items.get(1).getQuantity();
-    int expResult = 10 - 4;
-        assertEquals("Inventory has not been updated correctly",expResult,result);       
-
-    }   @Test
+   @Test
         public void testLoadInventory() {
 
                 ExternalCreator ext = new ExternalCreator();
