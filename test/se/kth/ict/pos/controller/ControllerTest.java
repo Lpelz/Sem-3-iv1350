@@ -78,24 +78,5 @@ public class ControllerTest {
         int result = instance.endSale();
         assertEquals("Wrong total cost",expResult, result);
     }
-
-  
-    @Test
-    public void testSendSaleInfo() {
-   
-    ExternalCreator ext = new ExternalCreator();
-    Controller contr = new Controller(ext);
-    int itemIdentifier = 2;
-    int quantity = 4;
-    contr.startSale();
-    contr.enterItemIdentifier(itemIdentifier,quantity);
-    Sale sale = contr.getSale(); 
-    Inventory instance = ext.getInventory();
-    instance.updateInventory(sale);
-    List <SoldItem> items = instance.getList();
-    int result = items.get(1).getQuantity();
-    int expResult = 10 - 4;
-        assertEquals("Sale info has not been properly sent",expResult,result);    
-    }
     
 }
