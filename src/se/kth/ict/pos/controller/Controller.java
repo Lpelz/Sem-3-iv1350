@@ -96,14 +96,6 @@ public class Controller {
         saleRegistry.saveSaleInfo(sale);
         inventory.updateInventory(sale);
         acc.sendSaleInfo(sale);
-    }
-    /**
-     * @return The current instance of the Sale.
-    */ 
-    public Sale getSale(){
-        return this.sale;
-    }
-        
-    
+    }               
     
 }
