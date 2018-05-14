@@ -26,5 +26,19 @@ public class InventoryTest {
     int expResult = 10 - 4;
         assertEquals("Inventory has not been updated correctly",expResult,result);       
 
-    }   
+    }   @Test
+        public void testLoadInventory() {
+
+                ExternalCreator ext = new ExternalCreator();
+                Inventory instance = ext.getInventory();
+                List <SoldItem> inventory  = instance.getList();
+                ItemSpecification itemSpec = new ItemSpecification(10,"Coconut candy bar" ,2);
+                SoldItem sold = new SoldItem(itemSpec,10);
+                SoldItem anotherSold = inventory.get(1);
+                String itemInfo = sold.getItemInfo();
+                String anotherItemInfo = anotherSold.getItemInfo();
+                assertEquals("Item not loaded into inventory, ",itemInfo,anotherItemInfo);
+        }
+    
+    
 }
