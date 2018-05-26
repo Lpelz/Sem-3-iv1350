@@ -20,7 +20,7 @@
 -                SoldItem anotherSold = inventory.get(1);
 -                String itemInfo = sold.getItemInfo();
 -                String anotherItemInfo = anotherSold.getItemInfo();
--                assertEquals("Item not stored in inventory",itemInfo,anotherItemInfo);
+-                assertEquals("Item has not been stored in inventory",itemInfo,anotherItemInfo);
 -        }
 -    
 -    
