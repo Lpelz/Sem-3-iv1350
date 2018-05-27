@@ -4,6 +4,7 @@ import se.kth.ict.pos.controller.Controller;
 import java.util.List;
 import se.kth.ict.pos.model.Sale;
 import se.kth.ict.pos.model.SoldItem;
+import se.kth.ict.pos.model.ItemSpecification;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
